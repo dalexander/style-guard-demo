@@ -3,15 +3,9 @@ namespace NS {
 
 Foo::~Foo() {}
 
-Foo::Size() const
-{
-    return 4;
-}
+Foo::Size() const { return 4; }
 
-void Foo::SetBar(int i)
-{
-    bar = i;
-}
+void Foo::SetBar(int i) { bar = i; }
 
 void Foo::Frobnicate()
 {
@@ -25,5 +19,5 @@ void Foo::ReverseFrobnicate()
     doSomething();
 }
 
-} // ::NS
+}  // ::NS
 // ---

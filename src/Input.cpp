@@ -1,4 +1,3 @@
-// ---
 namespace NS {
 
 Foo::~Foo() {}
@@ -20,4 +19,3 @@ void Foo::ReverseFrobnicate()
 }
 
 }  // ::NS
-// ---

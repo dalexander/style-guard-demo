@@ -1,0 +1,25 @@
+* What?
+The intention here is to get source code formatting automatically
+checked and guaranteed before checkin.
+
+* Why?
+- Automate style-guide compliance to avoid squabbles
+- Post-checkin reformatting binges mess up history.  It's best to get
+  it right from the get-go.
+
+
+* How?
+See the Makefile---there are rules there appropriate for a git
+pre-push hook to check formatting, a CI testing hook to check
+formatting, and for actually performing the reformatting.
+
+
+* Tips
+- We should *not* reformat bundled third-party code as it will make it
+  difficult to diff with upstream.  Put such code in a subdirectory
+  with its own .clangformat file containing: "BasedOnStyle: None" to
+  disable formatting.
+
+- If clang-format mangles something (for example, a comment block with
+  ASCII art or significant whitespace), you can protect a block using
+  "// clang-format off" and then "// clang-format on".

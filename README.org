@@ -9,9 +9,11 @@ checked and guaranteed before checkin.
 
 
 * How?
-See the Makefile---there are rules there appropriate for a git
-pre-push hook to check formatting, a CI testing hook to check
-formatting, and for actually performing the reformatting.
+See the tools:
+  - ~tools/check-formatting --staged~ for fast style-checking of
+    changed files, in a git commit/push hook;
+  - ~tools/check-formatting --all~ for slower style-checking of everything
+  - ~tools/format-all~ to format everything
 
 
 * Tips
@@ -22,4 +24,4 @@ formatting, and for actually performing the reformatting.
 
 - If clang-format mangles something (for example, a comment block with
   ASCII art or significant whitespace), you can protect a block using
-  "// clang-format off" and then "// clang-format on".
+  ~// clang-format off~ and then ~// clang-format on~.

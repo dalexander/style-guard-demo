@@ -1,6 +1,7 @@
 #!/bin/bash
 
-CLANGFORMAT="./tools/darwin_x64/clang-format -style=file"
+PLATFORM=$(uname)
+CLANGFORMAT="./tools/${PLATFORM}/clang-format -style=file"
 
 if [ "$1" == "--all" ]
 then

@@ -32,3 +32,10 @@ To enable the checking as a pre-commit hook, place the following in
 - If clang-format mangles something (for example, a comment block with
   ASCII art or significant whitespace), you can protect a block using
   ~// clang-format off~ and then ~// clang-format on~.
+
+* What are these binaries?
+  The `clang-format` binaries that are checked in are static builds of
+  clang-format v3.9 from https://github.com/angular/clang-format.
+  They are bundled because the LLVM toolchain has a reputation for
+  rapid change and incompatibility.  We want to guarantee that devs
+  are using the same version as CI is.
